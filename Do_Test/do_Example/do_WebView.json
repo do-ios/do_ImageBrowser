@@ -1,0 +1,162 @@
+{
+  "Android" : {
+    "MinVersion" : "4.0",
+    "Support" : 1
+  },
+  "Description" : "可以加载html网页，同时在网页中可以使用DeviceOne提供的js SDK实现跨webview的交互。",
+  "Events" : [
+    {
+      "Description" : "加载结束事件",
+      "ID" : "loaded",
+      "ReturnDesc" : "",
+      "ReturnType" : ""
+    },
+    {
+      "Description" : "开始加载",
+      "ID" : "start",
+      "ReturnDesc" : "",
+      "ReturnType" : ""
+    },
+    {
+      "Description" : "拖拽scroll下拉出headerview所触发的事件",
+      "ID" : "pull",
+      "ReturnDesc" : "{\"state\":0,\"y\":\"-10\"},其中 state 0 ： 表示下拉刷新状态，1：表示松开后刷新状态，2：表示加载中状态",
+      "ReturnType" : "Node"
+    }
+  ],
+  "Html" : {
+    "MinVersion" : "",
+    "Support" : 1
+  },
+  "ID" : "do_WebView",
+  "IOS" : {
+    "MinVersion" : "7.0",
+    "Support" : 1
+  },
+  "Icon" : "",
+  "IsContainer" : "0",
+  "Name" : "网页视图控件",
+  "Properties" : [
+    {
+      "DefaultValue" : "http://www.baidu.com",
+      "Description" : "支持http://,https://,支持source://,data://文件格式。文件格式的说明可以参考Storage类",
+      "Design" : {
+        "Data" : [],
+        "Type" : "Text"
+      },
+      "EditType" : "1",
+      "Group" : "",
+      "ID" : "url",
+      "Name" : "网页地址",
+      "Type" : "String"
+    },
+    {
+      "DefaultValue" : "",
+      "Description" : "设置一个表头视图，可以下拉列表露出表头，设置一些效果，超出一个高度后松手可以触发一些加载数据的过程。这个值只能是source格式的ui文件。文件格式可参考Storage类。关于headerview可以参考HeaderView的类说明。",
+      "Design" : {
+        "Data" : [],
+        "Type" : "Text"
+      },
+      "EditType" : "0",
+      "Group" : "",
+      "ID" : "headerView",
+      "Name" : "表头视图",
+      "Type" : "String"
+    }
+  ],
+  "Type" : "UI",
+  "Version" : "1.0",
+  "Windows" : {
+    "MinVersion" : "8.1",
+    "Support" : 1
+  },
+  "WindowsPhone" : {
+    "MinVersion" : "8.1",
+    "Support" : 1
+  },
+  "asyncMethodes" : [
+    {
+      "Description" : "",
+      "ID" : "loadString",
+      "Name" : "加载html字符串",
+      "Paras" : [
+        {
+          "DefaultValue" : "Hello world",
+          "Description" : "",
+          "ID" : "text",
+          "Name" : "html格式文本字符串",
+          "Required" : 1,
+          "Type" : "String"
+        }
+      ],
+      "ReturnDesc" : "",
+      "ReturnType" : ""
+    }
+  ],
+  "syncMethodes" : [
+    {
+      "Description" : "",
+      "ID" : "back",
+      "Name" : "回退",
+      "Paras" : [],
+      "ReturnDesc" : "",
+      "ReturnType" : ""
+    },
+    {
+      "Description" : "",
+      "ID" : "forward",
+      "Name" : "前进",
+      "Paras" : [],
+      "ReturnDesc" : "",
+      "ReturnType" : ""
+    },
+    {
+      "Description" : "",
+      "ID" : "reload",
+      "Name" : "重新加载",
+      "Paras" : [],
+      "ReturnDesc" : "",
+      "ReturnType" : ""
+    },
+    {
+      "Description" : "",
+      "ID" : "stop",
+      "Name" : "停止刷新",
+      "Paras" : [],
+      "ReturnDesc" : "",
+      "ReturnType" : ""
+    },
+    {
+      "Description" : "",
+      "ID" : "canForward",
+      "Name" : "是否可继续前进",
+      "Paras" : [],
+      "ReturnDesc" : "返回是否可继续前进",
+      "ReturnType" : "Boolean"
+    },
+    {
+      "Description" : "",
+      "ID" : "canBack",
+      "Name" : "是否可后退",
+      "Paras" : [],
+      "ReturnDesc" : "检查是否有可以后退的历史记录",
+      "ReturnType" : "Boolean"
+    },
+    {
+      "Description" : "headerview复位",
+      "ID" : "rebound",
+      "Name" : "headerview复位",
+      "Paras" : [],
+      "ReturnDesc" : "",
+      "ReturnType" : ""
+    },
+    {
+      "Description" : "获取headerView的地址",
+      "ID" : "getHeaderView",
+      "Name" : "获取headerView的地址",
+      "Paras" : [],
+      "ReturnDesc" : "headerView的地址",
+      "ReturnType" : "String"
+    }
+  ]
+}
